@@ -4,19 +4,26 @@
 //
 //  Created by Samuel Aarón Flores Montemayor on 27/03/25.
 //
-
+import MapKit
 import SwiftUI
  
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    @State private var region: MKCoordinateRegion
+    
+    init() {
+            self._region = State(initialValue: MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            ))
         }
-        .padding()
-    }
+
+    var body: some View {
+        Map(coordinateRegion: $region)
+            .edgesIgnoringSafeArea(.all)
+            .onAppear {
+                print("Map loaded")
+            }
+        }
 }
 
 #Preview {
