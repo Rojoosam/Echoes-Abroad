@@ -29,9 +29,22 @@
 		BDE44F5C2D9644D2003955DB /* Echoes-AbroadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Echoes-AbroadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		BDF0F11D2D974E91001B2E06 /* Exceptions for "Echoes-Abroad" folder in "Compile Sources" phase from "Echoes-Abroad" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = BDE44F3E2D9644CE003955DB /* Sources */;
+			membershipExceptions = (
+				pins.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BDE44F442D9644CE003955DB /* Echoes-Abroad */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BDF0F11D2D974E91001B2E06 /* Exceptions for "Echoes-Abroad" folder in "Compile Sources" phase from "Echoes-Abroad" target */,
+			);
 			path = "Echoes-Abroad";
 			sourceTree = "<group>";
 		};
