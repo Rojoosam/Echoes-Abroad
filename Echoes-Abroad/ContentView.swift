@@ -8,7 +8,7 @@ struct ContentView: View {
     @State private var showSheet: Bool = false  // Estado para controlar la hoja
 
     var body: some View {
-        ZStack {
+        ZStack (alignment: .top){
             Map(position: $cameraPosition, selection: $mapSelection) {
                 ForEach(locations) { location in
                     Marker("", coordinate: location.coordinate)
@@ -27,6 +27,30 @@ struct ContentView: View {
                     showSheet = true  // Mostrar la hoja cuando se selecciona un pin
                 }
             }
+            
+            
+            ZStack {
+                // Fondo difuminado detrás del texto
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.ultraThinMaterial)
+                    .frame(height: 60)
+                    .padding(.horizontal, 20)
+                    .blur(radius: 0.5)
+
+                Text("Echoes Abroad")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [Color.green, Color.blue],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+            }
+            
+            
+            
+            
         }
         .sheet(isPresented: $showSheet) {
             if let selectedLocation = mapSelection {
