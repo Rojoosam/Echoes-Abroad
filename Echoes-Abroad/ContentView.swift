@@ -27,18 +27,23 @@ struct ContentView: View {
             }
             .onChange(of: mapSelection) { newSelection in
                 if let _ = newSelection {
-                    showSheet = true  // Mostrar la hoja cuando se selecciona un pin
+                    showSheet = true  // Show the sheet when a pin is selected
                 }
             }
-            .onTapGesture { location in
-                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                       let window = windowScene.windows.first {
-                        let mapView = MKMapView(frame: window.bounds)
-                        let coordinate = mapView.convert(location, toCoordinateFrom: window)
-                        newPinCoordinate = coordinate
-                        showNewPinSheet = true
-                    }
+            .onLongPressGesture(minimumDuration: 0.5) {
+                // Get the map view and the location where the gesture was performed
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                   let window = windowScene.windows.first {
+                    // You need to detect where the gesture occurred in the map view
+                    let mapView = MKMapView(frame: window.bounds)
+                    let location = window.convert(window.bounds.origin, to: mapView)
+                    let coordinate = mapView.convert(location, toCoordinateFrom: window)
+                    
+                    // Update the new pin coordinate and show the new pin sheet
+                    newPinCoordinate = coordinate
+                    showNewPinSheet = true
                 }
+            }
             ZStack {
                 // Fondo difuminado detrás del texto
                 RoundedRectangle(cornerRadius: 12)
