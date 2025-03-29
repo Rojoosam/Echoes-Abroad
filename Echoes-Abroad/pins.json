@@ -2,124 +2,124 @@
   "response": {
     "nearbyPins": [
       {
-        "longitude": "31.2357",
-        "latitude": "30.0444",
-        "color": "#228B22",
-        "message": "Experienced warm hospitality and rich history in Cairo."
-      },
-      {
-        "longitude": "36.8219",
-        "latitude": "-1.2921",
-        "color": "#228B22",
-        "message": "Enjoyed vibrant cultural traditions in Nairobi."
-      },
-      {
-        "longitude": "3.3792",
-        "latitude": "6.5244",
-        "color": "#228B22",
-        "message": "Felt the energy and community spirit in Lagos."
-      },
-      {
-        "longitude": "28.0473",
-        "latitude": "-26.2041",
-        "color": "#228B22",
-        "message": "Delighted by the diverse heritage and innovation in Johannesburg."
-      },
-      {
-        "longitude": "139.6917",
-        "latitude": "35.6895",
-        "color": "#FF4500",
-        "message": "Experienced cutting-edge technology and warm cultural exchange in Tokyo."
-      },
-      {
-        "longitude": "116.4074",
-        "latitude": "39.9042",
-        "color": "#FF4500",
-        "message": "Enjoyed a mix of ancient traditions and modern life in Beijing."
-      },
-      {
-        "longitude": "72.8777",
-        "latitude": "19.0760",
-        "color": "#FF4500",
-        "message": "Was inspired by the vibrant diversity and creativity in Mumbai."
-      },
-      {
-        "longitude": "126.9780",
-        "latitude": "37.5665",
-        "color": "#FF4500",
-        "message": "Felt celebrated for cultural heritage and modern innovation in Seoul."
-      },
-      {
-        "longitude": "-0.1278",
-        "latitude": "51.5074",
-        "color": "#1E90FF",
-        "message": "Relished the multicultural scene and rich history in London."
-      },
-      {
-        "longitude": "2.3522",
-        "latitude": "48.8566",
-        "color": "#1E90FF",
-        "message": "Embraced the art, culture, and warmth in Paris."
-      },
-      {
-        "longitude": "13.4050",
-        "latitude": "52.5200",
-        "color": "#1E90FF",
-        "message": "Found a welcoming atmosphere of creativity in Berlin."
-      },
-      {
-        "longitude": "12.4964",
-        "latitude": "41.9028",
-        "color": "#1E90FF",
-        "message": "Enjoyed timeless culture and delicious cuisine in Rome."
-      },
-      {
-        "longitude": "-74.0060",
-        "latitude": "40.7128",
-        "color": "#FFD700",
-        "message": "Felt empowered by diversity and endless opportunities in New York."
-      },
-      {
-        "longitude": "-118.2437",
-        "latitude": "34.0522",
-        "color": "#FFD700",
-        "message": "Experienced the dynamic blend of cultures and creativity in Los Angeles."
-      },
-      {
-        "longitude": "-79.3832",
-        "latitude": "43.6532",
-        "color": "#FFD700",
-        "message": "Appreciated the inclusive community and arts in Toronto."
-      },
-      {
         "longitude": "-99.1332",
         "latitude": "19.4326",
-        "color": "#FFD700",
-        "message": "Found joy in the rich history and lively streets of Mexico City."
+        "color": "green",
+        "message": "Enjoyed the rich history and vibrant streets of Mexico City."
       },
       {
-        "longitude": "151.2093",
-        "latitude": "-33.8688",
-        "color": "#800080",
-        "message": "Enjoyed the sunny vibes and cultural fusion in Sydney."
+        "longitude": "-103.3918",
+        "latitude": "20.6597",
+        "color": "green",
+        "message": "Felt inspired by the culture and traditions of Guadalajara."
       },
       {
-        "longitude": "144.9631",
-        "latitude": "-37.8136",
-        "color": "#800080",
-        "message": "Experienced an inspiring blend of art and multicultural energy in Melbourne."
+        "longitude": "-106.4111",
+        "latitude": "23.2494",
+        "color": "green",
+        "message": "Loved the beautiful beaches and friendly atmosphere in Mazatlán."
       },
       {
-        "longitude": "174.7633",
-        "latitude": "-36.8485",
-        "color": "#800080",
-        "message": "Felt embraced by the natural beauty and welcoming spirit in Auckland."
+        "longitude": "-110.9773",
+        "latitude": "29.0729",
+        "color": "green",
+        "message": "Experienced the warmth and hospitality of Hermosillo."
       },
       {
-        "longitude": "115.8605",
-        "latitude": "-31.9505",
-        "color": "#800080",
-        "message": "Delighted in the relaxed lifestyle and diverse community in Perth."
+        "longitude": "-87.0659",
+        "latitude": "20.6306",
+        "color": "red",
+        "message": "Enjoyed the breathtaking beaches and Mayan culture in Playa del Carmen."
+      },
+      {
+        "longitude": "-86.8515",
+        "latitude": "21.1619",
+        "color": "red",
+        "message": "Fascinated by the turquoise waters and nightlife of Cancún."
+      },
+      {
+        "longitude": "-99.2285",
+        "latitude": "18.9242",
+        "color": "red",
+        "message": "Discovered the historic beauty and gardens of Cuernavaca."
+      },
+      {
+        "longitude": "-97.1081",
+        "latitude": "32.5149",
+        "color": "red",
+        "message": "Explored the stunning beaches and marine life in Veracruz."
+      },
+      {
+        "longitude": "-101.2574",
+        "latitude": "21.019",
+        "color": "blue",
+        "message": "Admired the colonial charm and vibrant arts scene in Guanajuato."
+      },
+      {
+        "longitude": "-100.3153",
+        "latitude": "25.6866",
+        "color": "blue",
+        "message": "Enjoyed the modern cityscape and cultural sites in Monterrey."
+      },
+      {
+        "longitude": "-99.8311",
+        "latitude": "16.8531",
+        "color": "blue",
+        "message": "Relaxed by the beaches and enjoyed the sunsets in Acapulco."
+      },
+      {
+        "longitude": "-96.7169",
+        "latitude": "17.0613",
+        "color": "blue",
+        "message": "Delighted in the traditional flavors and history of Oaxaca."
+      },
+      {
+        "longitude": "-92.6345",
+        "latitude": "18.0001",
+        "color": "gold",
+        "message": "Appreciated the natural landscapes and culture of Villahermosa."
+      },
+      {
+        "longitude": "-110.321",
+        "latitude": "24.1426",
+        "color": "gold",
+        "message": "Experienced the tranquil beauty and marine wonders of La Paz."
+      },
+      {
+        "longitude": "-90.527",
+        "latitude": "19.834",
+        "color": "gold",
+        "message": "Enjoyed the history and charm of Campeche’s colonial streets."
+      },
+      {
+        "longitude": "-98.2062",
+        "latitude": "19.0413",
+        "color": "gold",
+        "message": "Marveled at the historic sites and cuisine of Puebla."
+      },
+      {
+        "longitude": "-90.7473",
+        "latitude": "19.4102",
+        "color": "purple",
+        "message": "Embraced the warm culture and stunning architecture of Mérida."
+      },
+      {
+        "longitude": "-99.5917",
+        "latitude": "18.8451",
+        "color": "purple",
+        "message": "Felt the artistic and natural beauty of Tepoztlán."
+      },
+      {
+        "longitude": "-104.6549",
+        "latitude": "24.0277",
+        "color": "purple",
+        "message": "Experienced the colonial charm and silver heritage of Durango."
+      },
+      {
+        "longitude": "-107.9917",
+        "latitude": "26.9089",
+        "color": "purple",
+        "message": "Discovered the breathtaking landscapes of Copper Canyon."
       }
     ]
   }
