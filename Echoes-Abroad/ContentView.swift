@@ -11,7 +11,7 @@ struct ContentView: View {
 
 
     var body: some View {
-        ZStack {
+        ZStack (alignment: .top){
             Map(position: $cameraPosition, selection: $mapSelection) {
                 ForEach(locations) { location in
                     Marker("", coordinate: location.coordinate)
@@ -39,7 +39,27 @@ struct ContentView: View {
                         showNewPinSheet = true
                     }
                 }
+            ZStack {
+                // Fondo difuminado detrás del texto
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.ultraThinMaterial)
+                    .frame(height: 60)
+                    .padding(.horizontal, 20)
+                    .blur(radius: 0.5)
+
+                Text("Echoes Abroad")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [Color.green, Color.blue],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+            }
         }
+        
+        
         .sheet(isPresented: $showSheet) {
             if let selectedLocation = mapSelection {
                 PinDetailView(location: selectedLocation)
