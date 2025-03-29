@@ -6,6 +6,7 @@ struct Pin: Codable {
     let latitude: String
     let color: String
     let message: String
+    let continent: String
 }
 
 // Container

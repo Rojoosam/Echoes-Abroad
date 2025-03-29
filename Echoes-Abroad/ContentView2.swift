@@ -15,13 +15,14 @@ struct ContentView2: View {
                     Text("📍 Lat: \(pin.latitude), Lon: \(pin.longitude)")
                     Text("🎨 Color: \(pin.color)")
                     Text("💬 Mensaje: \(pin.message)")
+                    Text("🌎 Continent: \(pin.continent)")
                 }.padding(2)
             }
             
             Button("📌 Agregar Pin de Prueba") {
                 
                 // LORENA: ESTA ES LA FORMA EN COMO AÑADES PINES
-                let newPin = Pin(longitude: "25.700000", latitude: "-100.300000", color: "#FF0000", message: "Nuevo punto agregado")
+                let newPin = Pin(longitude: "25.700000", latitude: "-100.300000", color: "#FF0000", message: "Nuevo punto agregado", continent: "America")
                 PinManager.shared.addPin(newPin)
                 
                 // LORENA: ASI CARGAS LA LISTA DE PINES CERCANOS

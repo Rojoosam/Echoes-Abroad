@@ -5,121 +5,141 @@
         "longitude": "-99.1332",
         "latitude": "19.4326",
         "color": "green",
-        "message": "Enjoyed the rich history and vibrant streets of Mexico City."
+        "message": "Enjoyed the rich history and vibrant streets of Mexico City.",
+        "continent": "Africa"
       },
       {
         "longitude": "-103.3918",
         "latitude": "20.6597",
         "color": "green",
-        "message": "Felt inspired by the culture and traditions of Guadalajara."
+        "message": "Felt inspired by the culture and traditions of Guadalajara.",
+        "continent": "Africa"
       },
       {
         "longitude": "-106.4111",
         "latitude": "23.2494",
         "color": "green",
-        "message": "Loved the beautiful beaches and friendly atmosphere in Mazatlán."
+        "message": "Loved the beautiful beaches and friendly atmosphere in Mazatlán.",
+        "continent": "Africa"
       },
       {
         "longitude": "-110.9773",
         "latitude": "29.0729",
         "color": "green",
-        "message": "Experienced the warmth and hospitality of Hermosillo."
+        "message": "Experienced the warmth and hospitality of Hermosillo.",
+        "continent": "Africa"
       },
       {
         "longitude": "-87.0659",
         "latitude": "20.6306",
         "color": "red",
-        "message": "Enjoyed the breathtaking beaches and Mayan culture in Playa del Carmen."
+        "message": "Enjoyed the breathtaking beaches and Mayan culture in Playa del Carmen.",
+        "continent": "Asia"
       },
       {
         "longitude": "-86.8515",
         "latitude": "21.1619",
         "color": "red",
-        "message": "Fascinated by the turquoise waters and nightlife of Cancún."
+        "message": "Fascinated by the turquoise waters and nightlife of Cancún.",
+        "continent": "Asia"
       },
       {
         "longitude": "-99.2285",
         "latitude": "18.9242",
         "color": "red",
-        "message": "Discovered the historic beauty and gardens of Cuernavaca."
+        "message": "Discovered the historic beauty and gardens of Cuernavaca.",
+        "continent": "Asia"
       },
       {
         "longitude": "-97.1081",
         "latitude": "32.5149",
         "color": "red",
-        "message": "Explored the stunning beaches and marine life in Veracruz."
+        "message": "Explored the stunning beaches and marine life in Veracruz.",
+        "continent": "Asia"
       },
       {
         "longitude": "-101.2574",
         "latitude": "21.019",
         "color": "blue",
-        "message": "Admired the colonial charm and vibrant arts scene in Guanajuato."
+        "message": "Admired the colonial charm and vibrant arts scene in Guanajuato.",
+        "continent": "Europe"
       },
       {
         "longitude": "-100.3153",
         "latitude": "25.6866",
         "color": "blue",
-        "message": "Enjoyed the modern cityscape and cultural sites in Monterrey."
+        "message": "Enjoyed the modern cityscape and cultural sites in Monterrey.",
+        "continent": "Europe"
       },
       {
         "longitude": "-99.8311",
         "latitude": "16.8531",
         "color": "blue",
-        "message": "Relaxed by the beaches and enjoyed the sunsets in Acapulco."
+        "message": "Relaxed by the beaches and enjoyed the sunsets in Acapulco.",
+        "continent": "Europe"
       },
       {
         "longitude": "-96.7169",
         "latitude": "17.0613",
         "color": "blue",
-        "message": "Delighted in the traditional flavors and history of Oaxaca."
+        "message": "Delighted in the traditional flavors and history of Oaxaca.",
+        "continent": "Europe"
       },
       {
         "longitude": "-92.6345",
         "latitude": "18.0001",
         "color": "orange",
-        "message": "Appreciated the natural landscapes and culture of Villahermosa."
+        "message": "Appreciated the natural landscapes and culture of Villahermosa.",
+        "continent": "Oceania"
       },
       {
         "longitude": "-110.321",
         "latitude": "24.1426",
         "color": "orange",
-        "message": "Experienced the tranquil beauty and marine wonders of La Paz."
+        "message": "Experienced the tranquil beauty and marine wonders of La Paz.",
+        "continent": "Oceania"
       },
       {
         "longitude": "-90.527",
         "latitude": "19.834",
         "color": "orange",
-        "message": "Enjoyed the history and charm of Campeche’s colonial streets."
+        "message": "Enjoyed the history and charm of Campeche’s colonial streets.",
+        "continent": "Oceania"
       },
       {
         "longitude": "-98.2062",
         "latitude": "19.0413",
         "color": "orange",
-        "message": "Marveled at the historic sites and cuisine of Puebla."
+        "message": "Marveled at the historic sites and cuisine of Puebla.",
+        "continent": "Oceania"
       },
       {
         "longitude": "-90.7473",
         "latitude": "19.4102",
         "color": "purple",
-        "message": "Embraced the warm culture and stunning architecture of Mérida."
+        "message": "Embraced the warm culture and stunning architecture of Mérida.",
+        "continent": "America"
       },
       {
         "longitude": "-99.5917",
         "latitude": "18.8451",
         "color": "purple",
-        "message": "Felt the artistic and natural beauty of Tepoztlán."
+        "message": "Felt the artistic and natural beauty of Tepoztlán.",
+        "continent": "America"
       },
       {
         "longitude": "-104.6549",
         "latitude": "24.0277",
         "color": "purple",
-        "message": "Experienced the colonial charm and silver heritage of Durango."
+        "message": "Experienced the colonial charm and silver heritage of Durango.",
+        "continent": "America"
       },
       {
         "longitude": "-107.9917",
         "latitude": "26.9089",
         "color": "purple",
-        "message": "Discovered the breathtaking landscapes of Copper Canyon."
+        "message": "Discovered the breathtaking landscapes of Copper Canyon.",
+        "continent": "America"
       }
     ]
   }
