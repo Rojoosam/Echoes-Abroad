@@ -6,25 +6,43 @@
 //
 import MapKit
 import SwiftUI
- 
+
 struct ContentView: View {
-    @State private var region: MKCoordinateRegion
-    
-    init() {
-            self._region = State(initialValue: MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
-                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-            ))
-        }
+    @State private var cameraPosition: MapCameraPosition = .region(.worldRegion)
+    @State private var mapSelection: Location?
+    @State private var locations: [Location] = []
 
     var body: some View {
-        Map(coordinateRegion: $region)
-            .edgesIgnoringSafeArea(.all)
-            .onAppear {
-                print("Map loaded")
+        Map(position: $cameraPosition, selection: $mapSelection) {
+            ForEach(locations) { location in
+                Marker(location.message, coordinate: location.coordinate)
+                    .tint(location.color)
             }
         }
+        .mapControls {
+            MapCompass()
+        }
+        .onAppear {
+            loadMarkersFromPinManager()
+        }
+    }
+
+    func loadMarkersFromPinManager() {
+        let pins = PinManager.shared.loadPins()
+        locations = pins.compactMap { $0.toLocation() }
+    }
 }
+
+extension MKCoordinateRegion {
+    static var worldRegion: MKCoordinateRegion {
+        .init(
+            center: CLLocationCoordinate2D(latitude: 20.0, longitude: 0.0),
+            latitudinalMeters: 50000000,
+            longitudinalMeters: 50000000
+        )
+    }
+}
+
 
 #Preview {
     ContentView()

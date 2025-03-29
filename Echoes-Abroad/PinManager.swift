@@ -1,4 +1,7 @@
 import Foundation
+import SwiftUI
+import MapKit
+
 
 // Pin Model
 struct Pin: Codable {
@@ -151,5 +154,52 @@ class PinManager {
     func clearPins() {
         savePins([])
         print("✅ Todos los pines han sido eliminados.")
+    }
+}
+
+
+extension Pin {
+    func toLocation() -> Location? {
+        guard let lat = Double(latitude),
+              let lon = Double(longitude) else { return nil }
+
+        return Location(
+            coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon),
+            color: Color(hex: color),
+            message: message
+        )
+    }
+}
+
+
+//ES ESTO DE AQUI LO QUE CAMBIE LOL
+
+//Hay que convertir el formato porque el MAP() nuevo necesita un formato 'Location' como este para leer los pins
+//sorry por hacerte trabajar mas jajajaja pero de verdad hacer asi el mapa es muuuucho mas sencillo T-T
+struct Location: Identifiable, Hashable {
+    let id = UUID()
+    let coordinate: CLLocationCoordinate2D
+    let color: Color
+    let message: String
+
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
+        _ = scanner.scanString("#")
+        var rgb: UInt64 = 0
+        scanner.scanHexInt64(&rgb)
+        let r = Double((rgb >> 16) & 0xFF) / 255
+        let g = Double((rgb >> 8) & 0xFF) / 255
+        let b = Double(rgb & 0xFF) / 255
+        self.init(red: r, green: g, blue: b)
     }
 }
