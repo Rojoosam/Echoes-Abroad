@@ -37,7 +37,7 @@ struct ContentView: View {
 extension MKCoordinateRegion {
     static var worldRegion: MKCoordinateRegion {
         .init(
-            center: CLLocationCoordinate2D(latitude: 20.0, longitude: 0.0),
+            center: CLLocationCoordinate2D(latitude: 23.6345, longitude: -102.5528),
             latitudinalMeters: 50000000,
             longitudinalMeters: 50000000
         )
