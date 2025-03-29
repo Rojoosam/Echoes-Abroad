@@ -56,7 +56,7 @@ struct PinDetailView: View {
                 .frame(width: 50, height: 50)
                 .overlay(Circle().stroke(location.color, lineWidth: 2))
             
-            Text("África").foregroundColor(.gray)
+            Text(location.continent).foregroundColor(.gray)
             
             Text("Coordenadas: \(location.coordinate.latitude), \(location.coordinate.longitude)")
                 .font(.subheadline)

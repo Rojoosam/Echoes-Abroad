@@ -158,16 +158,29 @@ class PinManager {
     }
 }
 
-
 extension Pin {
     func toLocation() -> Location? {
         guard let lat = Double(latitude),
               let lon = Double(longitude) else { return nil }
 
+        // Diccionario de colores por continente
+        let continentColors: [String: String] = [
+            "Africa": "#717883",  // Negro (representa a África)
+            "Europe": "#005A8D",  // Azul (representa a Europa)
+            "Asia": "#F1C232",    // Amarillo (representa a Asia)
+            "America": "#00A859", // Verde (representa a América)
+            "Oceania": "#F11C2B", // Rojo (representa a Oceanía)
+            "Antarctica": "#FFFFFF" // Blanco (usado para completar el diseño)
+        ]
+
+        // Usar siempre el color basado en el continente
+        let resolvedColor = continentColors[continent] ?? "#808080" // Fallback a gris si no hay color para el continente
+
         return Location(
             coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon),
-            color: Color(hex: color),
-            message: message
+            color: Color(from: resolvedColor),  // Siempre usa el color del continente
+            message: message,
+            continent: continent
         )
     }
 }
@@ -182,6 +195,7 @@ struct Location: Identifiable, Hashable {
     let coordinate: CLLocationCoordinate2D
     let color: Color
     let message: String
+    let continent: String
 
     static func == (lhs: Location, rhs: Location) -> Bool {
         lhs.id == rhs.id
@@ -193,14 +207,39 @@ struct Location: Identifiable, Hashable {
 }
 
 extension Color {
+    init(from value: String) {
+        let namedColors: [String: String] = [
+            "red": "#F43535",
+            "green": "#62BD22",
+            "blue": "#35F4E8",
+            "yellow": "#DDF435",
+            "black": "#000000",
+            "white": "#FFFFFF"
+        ]
+        
+        let hex = namedColors[value.lowercased()] ?? value
+        print("Parsing color: \(value) -> \(hex)") // Depuración
+        self.init(hex: hex)
+    }
+    
     init(hex: String) {
-        let scanner = Scanner(string: hex)
-        _ = scanner.scanString("#")
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        if hexSanitized.hasPrefix("#") {
+            hexSanitized.removeFirst()
+        }
+        
         var rgb: UInt64 = 0
-        scanner.scanHexInt64(&rgb)
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else {
+            print("Failed to parse hex: \(hexSanitized)") // Depuración
+            self = .gray // Fallback color
+            return
+        }
+        
         let r = Double((rgb >> 16) & 0xFF) / 255
         let g = Double((rgb >> 8) & 0xFF) / 255
         let b = Double(rgb & 0xFF) / 255
+        print("Parsed RGB: \(r), \(g), \(b)") // Depuración
+        
         self.init(red: r, green: g, blue: b)
     }
 }
