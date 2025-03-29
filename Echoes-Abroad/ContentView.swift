@@ -14,11 +14,12 @@ struct ContentView: View {
 
     var body: some View {
         Map(position: $cameraPosition, selection: $mapSelection) {
-            ForEach(locations) { location in
-                Marker(location.message, coordinate: location.coordinate)
-                    .tint(location.color)
-            }
-        }
+                    ForEach(locations) { location in
+                        Marker(location.message, coordinate: location.coordinate)
+                            .tint(location.color)
+                            .tag(location)
+                    }
+                }
         .mapControls {
             MapCompass()
         }
